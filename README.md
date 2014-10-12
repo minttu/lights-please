@@ -10,7 +10,7 @@ Web UI for the living rooms DMX controlled LEDs. To be used on everything from a
 
 A bit like this:
 
-![Main Page](https://raw.github.com/JuhaniImberg/lights-please/mockup/Main_Page.png)
-![Map Page](https://raw.github.com/JuhaniImberg/lights-please/mockup/Map_Page.png)
-![Details Page](https://raw.github.com/JuhaniImberg/lights-please/mockup/Details_Page.png)
-![Presets Page](https://raw.github.com/JuhaniImberg/lights-please/mockup/Presets_Page.png)
+![Main Page](https://raw.githubusercontent.com/JuhaniImberg/lights-please/master/mockup/Main_Page.png)
+![Map Page](https://raw.githubusercontent.com/JuhaniImberg/lights-please/master/mockup/Map_Page.png)
+![Details Page](https://raw.githubusercontent.com/JuhaniImberg/lights-please/master/mockup/Details_Page.png)
+![Presets Page](https://raw.githubusercontent.com/JuhaniImberg/lights-please/master/mockup/Presets_Page.png)
