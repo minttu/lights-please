@@ -1,7 +1,7 @@
 Lights-Please
 =============
 
-Light control UI in AngularJS and CoffeeScript.
+Light control UI in AngularJS and CoffeeScript. [Backend](https://github.com/JuhaniImberg/lights-please-backend)
 
 Idea
 ----
