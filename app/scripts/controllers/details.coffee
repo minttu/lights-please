@@ -2,13 +2,13 @@
 
 ###*
  # @ngdoc function
- # @name lightsPleaseApp.controller:MainCtrl
+ # @name lightsPleaseApp.controller:DetailsCtrl
  # @description
- # # MainCtrl
+ # # DetailsCtrl
  # Controller of the lightsPleaseApp
 ###
 angular.module('lightsPleaseApp')
-  .controller 'MainCtrl', ($scope, Data) ->
+  .controller 'DetailsCtrl', ($scope, Data) ->
     $scope.groups = Data.groups
 
     $scope.$on "update", ->
@@ -19,3 +19,6 @@ angular.module('lightsPleaseApp')
         Data.push {groups: [{name: group.name, value: 0}]}
       else
         Data.push {groups: [{name: group.name, value: 255}]}
+
+    $scope.change = (group, light) ->
+      Data.push {groups: [{name: group.name, lights: [light]}]}

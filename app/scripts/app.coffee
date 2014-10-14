@@ -23,11 +23,14 @@ angular
       .when '/',
         templateUrl: 'views/main.html'
         controller: 'MainCtrl'
-      .when '/about',
-        templateUrl: 'views/about.html'
-        controller: 'AboutCtrl'
       .when '/map',
         templateUrl: 'views/map.html'
         controller: 'MapCtrl'
+      .when '/details',
+        templateUrl: 'views/details.html'
+        controller: 'DetailsCtrl'
+      .when '/presets',
+        templateUrl: 'views/presets.html'
+        controller: 'PresetsCtrl'
       .otherwise
         redirectTo: '/'

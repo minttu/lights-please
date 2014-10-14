@@ -21,17 +21,17 @@
 
     <!-- Add your site or application content here -->
     <div class="container">
-      <nav>
-          <ul>
-              <li>
-                  <a href="#/">Main</a>
-              </li>
-              <li>
-                  <a href="#/map">Map</a>
-              </li>
-          </ul>
+      <nav ng-controller="NavbarCtrl">
+        <ul>
+          <li><a ng-class="{ active: isActive('/')}" href="#/">Main</a></li>
+          <li><a ng-class="{ active: isActive('/map')}" href="#/map">Map</a></li>
+          <li><a ng-class="{ active: isActive('/details')}" href="#/details">Details</a></li>
+          <li><a ng-class="{ active: isActive('/presets')}" href="#/presets">Details</a></li>
+        </ul>
       </nav>
-      <div ng-view=""></div>
+      <div class="world">
+        <div ng-view=""></div>
+      </div>
     </div>
 
 
@@ -72,13 +72,16 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/map.js"></script>
         <script src="scripts/services/data.js"></script>
         <script src="scripts/filters/ununderscore.js"></script>
         <script src="scripts/filters/capitalize.js"></script>
         <script src="scripts/directives/integer.js"></script>
         <script src="scripts/filters/tocolor.js"></script>
+        <script src="scripts/controllers/details.js"></script>
+        <script src="scripts/controllers/navbar.js"></script>
+        <script src="scripts/controllers/presets.js"></script>
+        <script src="scripts/directives/slider.js"></script>
         <!-- endbuild -->
 </body>
 </html>

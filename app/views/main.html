@@ -1,16 +1,7 @@
 <ul>
-    <li class="detail-group" ng-repeat="group in groups">
-        <h3>{{group.name | ununderscore}}</h3>
-        <ul>
-            <li class="detail-light" ng-repeat="light in group.lights">
-                <h4>{{light.name | ununderscore}}</h4>
-                <ul>
-                    <li class="channel" ng-repeat="(name, channel) in light.channels">
-                        <span class="name">{{name | capitalize}}</span>
-                        <input type="range" min="0" max="255" ng-model="channel.value" integer="" ng-change="change(group, light)">
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </li>
+  <li ng-repeat="group in groups" class="toggle" ng-class="group.value == 0 ? 'toggle-off' : 'toggle-on'">
+    <div ng-click="toggle(group)" class="box upper"><div class="content">ON</div></div>
+    <div ng-click="toggle(group)" class="box lower"><div class="content">OFF</div></div>
+    <h3>{{group.name | ununderscore}}</h3>
+  </li>
 </ul>

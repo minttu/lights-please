@@ -1,0 +1,19 @@
+<div class="detail-group" ng-repeat="group in groups">
+  <h3>
+    {{group.name | ununderscore}}
+    |
+    <label for="s{{group.name}}">Active:</label>
+    <input id="s{{group.name}}" type="checkbox" ng-checked="group.value != 0" ng-click="toggle(group)">
+  </h3>
+  <ul>
+    <li class="detail-light" ng-repeat="light in group.lights">
+      <h4><span class="preview" style="background-color: {{light.channels | tocolor}}"></span> {{light.name | ununderscore}}</h4>
+      <ul>
+        <li class="channel" ng-repeat="(name, channel) in light.channels">
+          <label for="c{{channel.index}}" class="name">{{name | capitalize}}</label>
+          <input id="c{{channel.index}}" type="range" min="0" max="255" ng-model="channel.value" integer="" ng-change="change(group, light)">
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

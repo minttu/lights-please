@@ -2,13 +2,13 @@
 
 ###*
  # @ngdoc function
- # @name lightsPleaseApp.controller:AboutCtrl
+ # @name lightsPleaseApp.controller:PresetsCtrl
  # @description
- # # AboutCtrl
+ # # PresetsCtrl
  # Controller of the lightsPleaseApp
 ###
 angular.module('lightsPleaseApp')
-  .controller 'AboutCtrl', ($scope) ->
+  .controller 'PresetsCtrl', ($scope) ->
     $scope.awesomeThings = [
       'HTML5 Boilerplate'
       'AngularJS'
