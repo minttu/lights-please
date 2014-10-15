@@ -1,0 +1,45 @@
+@import "variables";
+
+$on : $light;
+$off : darken($light, 20%);
+
+.toggles {
+  li {
+    display: inline-block;
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+.outer-toggle {
+  background-color: $off;
+  width: 25vh;
+  display: inline-block;
+  position: relative;
+  border: thin solid $dark;
+  border-radius: 1rem;
+  cursor: pointer;
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 200%;
+  }
+  .inner-toggle {
+    background-color: $on;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    bottom: 0;
+    height: 50%;
+    border-radius: 1rem;
+    font-size: 4vh;
+    vertical-align: middle;
+    display: table-cell;
+    line-height: 25vh;
+    transition: top 0.5s;
+    &.active {
+      top: 0;
+    }
+  }
+}

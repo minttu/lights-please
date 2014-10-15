@@ -1,0 +1,56 @@
+@import "variables";
+
+.half {
+  width: 50%;
+  min-width: 400px;
+  display: inline-block;
+  float: left;
+  padding: 2rem;
+  h2 {
+    text-align: center;
+  }
+}
+
+.preset-save {
+  text-align: center;
+  input {
+    background-color: $light;
+    padding: 1rem;
+    margin: 0;
+    font-size: 1.2rem;
+    display: inline-block;
+    width: 80%;
+    border-radius: 4px;
+    border: thin solid $dark;
+  }
+  input[type=text] {
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+  }
+  input[type=button] {
+    border-radius: 0 0 4px 4px;
+    background-color: $accent;
+    color: $light;
+  }
+}
+
+.preset-load {
+  button {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    border: thin solid #333;
+    font-size: 1.2rem;
+    padding: 1rem;
+    margin: 1rem;
+    transition: background-color 0.25s, box-shadow 0.25s, color 0.25s;
+    box-shadow: 2px 2px 0 #333;
+    &:hover {
+      background-color: tint(#007FFF, 75%);
+    }
+    &:active {
+      background-color: tint(#007FFF, 50%);
+      color: #f5f5f5;
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: $light;
+  color: $dark;
+  font-size: 16px;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+}
+
+.world {
+  padding: 6rem;
+}

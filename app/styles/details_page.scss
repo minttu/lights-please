@@ -1,0 +1,60 @@
+@import "variables";
+
+input[type=range] {
+  margin-top: 0.25rem;
+}
+
+.detail-group {
+  margin: 1rem;
+  background-color: white;
+  border: thin solid black;
+  border-radius: 3px;
+  display: inline-block;
+  float: left;
+  @include clearfix;
+  h3 {
+    padding: 1rem;
+    margin: 0;
+    background-color: $accent;
+    color: #ffffff;
+    border-bottom: thin solid $dark;
+    input[type=checkbox] {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+  ul {
+    padding: 1rem;
+    .detail-light {
+      width: 300px;
+      ul {
+        padding: 0.2rem;
+        li {
+          padding-left: 1rem;
+          input[type=range] {
+            margin: 0;
+            width: 80%;
+          }
+          label {
+            text-align: right;
+            padding-right: 0.5rem;
+            float: left;
+            width: 20%;
+          }
+        }
+      }
+      h4 {
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        .preview {
+          display: inline-block;
+          width: 1rem;
+          height: 1rem;
+          border: thin solid black;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+}
