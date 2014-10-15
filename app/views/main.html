@@ -1,5 +1,5 @@
 <ul>
-  <li ng-repeat="group in groups" class="toggle" ng-class="group.value == 0 ? 'toggle-off' : 'toggle-on'">
+  <li ng-repeat="group in groups" class="toggle" ng-class="group.active == true ? 'toggle-on' : 'toggle-off'">
     <div ng-click="toggle(group)" class="box upper"><div class="content">ON</div></div>
     <div ng-click="toggle(group)" class="box lower"><div class="content">OFF</div></div>
     <h3>{{group.name | ununderscore}}</h3>

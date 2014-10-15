@@ -15,10 +15,7 @@ angular.module('lightsPleaseApp')
       $scope.groups = Data.groups
 
     $scope.toggle = (group) ->
-      if group.value != 0
-        Data.push {groups: [{name: group.name, value: 0}]}
-      else
-        Data.push {groups: [{name: group.name, value: 255}]}
+      Data.toggle group
 
     $scope.change = (group, light) ->
       Data.push {groups: [{name: group.name, lights: [light]}]}

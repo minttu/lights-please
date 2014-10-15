@@ -3,7 +3,7 @@
     {{group.name | ununderscore}}
     |
     <label for="s{{group.name}}">Active:</label>
-    <input id="s{{group.name}}" type="checkbox" ng-checked="group.value != 0" ng-click="toggle(group)">
+    <input id="s{{group.name}}" type="checkbox" ng-checked="group.active" ng-click="toggle(group)">
   </h3>
   <ul>
     <li class="detail-light" ng-repeat="light in group.lights">

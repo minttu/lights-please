@@ -1,1 +1,12 @@
-<p>This is the presets view.</p>
+<div class="half preset-save">
+  <h2>Save preset</h2>
+  <input type="text" ng-model="name" placeholder="Preset name">
+  <input type="button" ng-click="save()" value="Save">
+</div>
+<div class="half preset-load">
+  <h2>Load preset</h2>
+  <button ng-repeat="preset in presets"
+          ng-click="load(preset)">
+    {{preset.name}}
+  </button>
+</div>
