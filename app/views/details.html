@@ -1,19 +1,29 @@
-<div class="detail-group" ng-repeat="group in groups">
-  <h3>
-    {{group.name | ununderscore}}
-    |
-    <label for="s{{group.name}}">Active:</label>
-    <input id="s{{group.name}}" type="checkbox" ng-checked="group.active" ng-click="toggle(group)">
-  </h3>
-  <ul>
-    <li class="detail-light" ng-repeat="light in group.lights">
-      <h4><span class="preview" style="background-color: {{light.channels | tocolor}}"></span> {{light.name | ununderscore}}</h4>
-      <ul>
-        <li class="channel" ng-repeat="(name, channel) in light.channels">
-          <label for="c{{channel.index}}" class="name">{{name | capitalize}}</label>
-          <input id="c{{channel.index}}" type="range" min="0" max="255" ng-model="channel.value" integer="" ng-change="change(group, light)">
-        </li>
-      </ul>
-    </li>
-  </ul>
+<div class="detail-container">
+  <div class="detail-group" ng-repeat="group in groups">
+    <h3>
+      {{group.name | unUnderscore}}
+      |
+      <label for="s{{group.name}}">Active:</label>
+      <input id="s{{group.name}}" type="checkbox" ng-checked="group.active" ng-click="toggle(group)">
+    </h3>
+    <ul>
+      <li class="detail-light" ng-repeat="light in group.lights">
+        <h4 ng-class="light.type == 'rgb_strip' ? '' : 'superfunclass'">
+          <span class="preview" ng-if="light.type == 'rgb_strip'" style="background-color: {{light.channels | toColor}}"></span>
+          {{light.name | unUnderscore}}
+        </h4>
+        <ul ng-if="light.type == 'rgb_strip'">
+          <li class="channel" ng-repeat="item in light.channels | toArray | orderBy:'index':false">
+            <label class="name">{{item.key | capitalize}}</label>
+            <slider name="item.key" ng-model="item.value" ng-change="set(group, light, item.key, item.value)"></slider>
+          </li>
+        </ul>
+        <slider ng-if="light.type != 'rgb_strip'"
+                name="'Main'"
+                ng-model="light.channels['main'].value"
+                ng-change="set(group, light, 'main', light.channels['main'].value)"
+                ></slider>
+      </li>
+    </ul>
+  </div>
 </div>

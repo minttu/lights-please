@@ -2,7 +2,6 @@
 
 .half {
   width: 50%;
-  min-width: 400px;
   display: inline-block;
   float: left;
   padding: 2rem;
@@ -53,4 +52,13 @@
       box-shadow: none;
     }
   }
+}
+
+@media screen and (max-width: 500px) {
+
+  .half {
+    width: 100%;
+    padding: 1rem 0.25rem;
+  }
+
 }

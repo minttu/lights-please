@@ -9,7 +9,7 @@
  # Filter in the lightsPleaseApp.
 ###
 angular.module('lightsPleaseApp')
-  .filter 'tocolor', ->
+  .filter 'toColor', ->
     (input) ->
       if input.main?
         val = input.main.value

@@ -27,7 +27,7 @@
           <li><a ng-class="{ active: isActive('/')}" href="#/">Main</a></li>
           <li><a ng-class="{ active: isActive('/map')}" href="#/map">Map</a></li>
           <li><a ng-class="{ active: isActive('/details')}" href="#/details">Details</a></li>
-          <li><a ng-class="{ active: isActive('/presets')}" href="#/presets">Details</a></li>
+          <li><a ng-class="{ active: isActive('/presets')}" href="#/presets">Presets</a></li>
         </ul>
       </nav>
       <div class="world">
@@ -54,6 +54,7 @@
     <![endif]-->
     <!-- endbuild -->
 
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
@@ -83,6 +84,7 @@
         <script src="scripts/controllers/navbar.js"></script>
         <script src="scripts/controllers/presets.js"></script>
         <script src="scripts/directives/slider.js"></script>
+        <script src="scripts/filters/toarray.js"></script>
         <!-- endbuild -->
 </body>
 </html>

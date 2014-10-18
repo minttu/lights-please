@@ -9,6 +9,6 @@
  # Filter in the lightsPleaseApp.
 ###
 angular.module('lightsPleaseApp')
-  .filter 'ununderscore', ->
+  .filter 'unUnderscore', ->
     (input) ->
       return input.replace(/_/g, " ")

@@ -43,3 +43,9 @@ $off : darken($light, 20%);
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .outer-toggle {
+    width: 10vh;
+  }
+}

@@ -4,14 +4,6 @@
   box-sizing: border-box;
 }
 
-@mixin clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
 html {
   min-height: 100%;
 }
@@ -38,4 +30,16 @@ li {
 
 .world {
   padding: 6rem;
+}
+
+@media screen and (max-width: 600px) {
+  .world {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .world {
+    padding: 1rem 0;
+  }
 }

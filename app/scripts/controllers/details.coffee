@@ -17,5 +17,7 @@ angular.module('lightsPleaseApp')
     $scope.toggle = (group) ->
       Data.toggle group
 
-    $scope.change = (group, light) ->
-      Data.push {groups: [{name: group.name, lights: [light]}]}
+    $scope.set = Data.set
+
+    #$scope.change = (group, light) ->
+    #  Data.push {groups: [{name: group.name, lights: [light]}]}
