@@ -1,7 +1,6 @@
-<div class="map-group" ng-repeat="group in groups"
-     style="top: {{group.size.y}}%; left: {{group.size.x}}%; width: {{group.size.w}}%; height: {{group.size.h}}%">
-    <div class="map-light" ng-repeat="light in group.lights"
-         style="left: {{light.position.x}}%; top: {{light.position.y}}%; background-color: {{light.channels | toColor}};"
-         ng-click="toggle(group, light)">
-    </div>
+<div class="map-container">
+  <map-group ng-repeat="group in groups"
+             position="group.position"
+             name="group.name"
+             lights="group.lights"></map-group>
 </div>

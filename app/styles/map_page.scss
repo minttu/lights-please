@@ -1,19 +1,52 @@
 @import "variables";
 
-.map-group {
-  position: fixed;
-  padding: 2%;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.05);
-}
+.map-container {
+  width: 40%;
+  position: relative;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
 
-.map-light {
-  position: fixed;
-  padding: 1%;
-  margin-top: 1%;
-  margin-left: 1%;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 100%;
-  border: solid thin $dark;
+  map-group {
+    position: absolute;
+    font-size: 1.5vw;
+    text-align: center;
+    padding: 0.2rem;
+    border-radius: 0.25rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    border: 0.2rem solid $light;
+    transition: border 0.5s;
+    &:hover {
+      border-color: darken($light, 30%)
+    }
+
+    map-light {
+      position: absolute;
+      border: thin solid $dark;
+      width: 2.5vw;
+      height: 2.5vw;
+      border-radius: 4px;
+      transition: transform 0.5s;
+      &:hover, &:active {
+        transform: scale(1.5);
+        z-index: 9;
+      }
+
+      &.light-spot {
+        border-radius: 100%;
+      }
+
+      &.light-strip {
+        height: 7.5vw;
+      }
+
+      &.light-rgb_strip { // plz
+        width: 7.5vw;
+      }
+    }
+  }
 }

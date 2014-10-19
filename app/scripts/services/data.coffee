@@ -24,13 +24,27 @@ angular.module('lightsPleaseApp')
           light.channels[channel_name].value = 255 * group.active
       service.socket.emit "update", {groups: [group]}
 
-    service.set = (group, light, channel_name, value) ->
+
+    # &*$# webdeveloping
+    service.purkkatoggle = (light_name) ->
+      for group in service.groups
+        for light in group.lights
+          if light.name == light_name
+            active = false
+            for channel_name of light.channels
+              if light.channels[channel_name].value < 10
+                active = true
+            for channel_name of light.channels
+              light.channels[channel_name].value = 255 * active
+              service.set group, light
+            return light.channels
+
+    service.set = (group, light) ->
       group.active = false
       for in_light in group.lights
         for c_name of in_light.channels
           if in_light.channels[c_name].value > 10
             group.active = true
-
       service.socket.emit "update", {groups: [{name: group.name, active: group.active, lights: [light]}]}
 
     service.save = (name) ->
