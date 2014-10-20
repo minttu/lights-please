@@ -6,5 +6,7 @@
 | 15.10 | 4h   | Tuki preseteille
 | 16.10 | 0h   |
 | 17.10 | 0h   |
-| 18.10 | 6h   | Details näkymän tyylittelyä, oma direktiivi, mobiiliyhteensopivuuden hiomista
-| 19.10 | 9h   | Karttanäkymä, toimivat presetit, refaktorointia, angularin kanssa tappelua, backendiä, deployausta
+| 18.10 | 6h   | Details näkymän tyylittelyä, oma direktiivi, mobiiliyhteensopivuuden hiomista
+| 19.10 | 9h   | Karttanäkymä, toimivat presetit, refaktorointia, angularin kanssa tappelua, backendiä, deployausta
+
+Yhteensä 35 tuntia.
